@@ -1,12 +1,3 @@
-=begin
-Future Goals:
-  -Give Player ability to Play again
-  -Give Player a "Pot" of money with a total that changes
-  -End game when player is out of money
-  -Give Player ability to bet befor each hand is dealt
-  -Add style, name, readability, sleep, etc.
-
-=end
 require 'pry'
 
 # Method Definitions
@@ -51,10 +42,10 @@ deck.shuffle!
 player_hand = []
 dealer_hand = []
 
+2.times do
 player_hand << deck.pop
 dealer_hand << deck.pop
-player_hand << deck.pop
-dealer_hand << deck.pop
+end
 
 dealer_total = calculate_total(dealer_hand)
 player_total = calculate_total(player_hand)
